@@ -1,8 +1,9 @@
 Summary:	A sandbox game, based on physics
+Summary(hu.UTF-8):	Egy fizikán alapuló játék
 Name:		caph
 Version:	091231
 Release:	0.3
-License:	GPL v2
+License:	GPL v3
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/project/caphgame/caph/caph-091231/%{name}-src-%{version}.tar.bz2
 # Source0-md5:	26d743ed2b82726dea8cd3c4780b3adb
@@ -24,6 +25,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 It is a sandbox game, based on physics. The game target is to make
 contact red object with green object. You can use various objects,
 solid, wire (rope), and bendable objects. Gravitation will help you.
+
+%description -l hu.UTF-8
+Egy játék, amely a fizikán alapszik. A játék célja, hogy a piros és a
+zöld objektumok kapcsolatba kerüljenek. Különféle dolgokat
+használhatsz, biztos, drót (kötél) és hajlíthatóakat. A gravitáció fog
+segíteni.
 
 %prep
 %setup -q -n %{name}-src
