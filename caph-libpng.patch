@@ -1,0 +1,11 @@
+--- caph-src-orig/src/draw.c	2010-02-07 15:33:02.375626732 +0100
++++ caph-src/src/draw.c	2010-02-07 15:33:45.505830811 +0100
+@@ -279,7 +279,7 @@
+ 		(ltype == PNG_COLOR_TYPE_GRAY_ALPHA))
+ 	{
+ 		if (bits < 8)
+-			png_set_gray_1_2_4_to_8(png_ptr);
++			png_set_expand_gray_1_2_4_to_8(png_ptr);
+ 		png_set_gray_to_rgb(png_ptr);
+ 	}
+ 

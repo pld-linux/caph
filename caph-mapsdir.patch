@@ -1,0 +1,11 @@
+--- caph-src-orig/src/maps.c	2010-02-07 15:33:02.378960686 +0100
++++ caph-src/src/maps.c	2010-02-07 15:58:53.158805702 +0100
+@@ -54,7 +54,7 @@
+ 		*c = '\0';
+ 
+ 		maps[this] = malloc(strlen(line) + 8);
+-		strcpy(maps[this], "maps/");
++		strcpy(maps[this], "/usr/share/caph/maps/");
+ 		strcat(maps[this++], line);
+ 	}
+ 

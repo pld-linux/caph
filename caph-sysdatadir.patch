@@ -1,0 +1,24 @@
+--- caph-src-orig/src/caph.c	2010-02-07 15:33:02.375626732 +0100
++++ caph-src/src/caph.c	2010-02-07 15:50:56.599688478 +0100
+@@ -37,7 +37,7 @@
+ #endif
+ 
+ #define SYS_PRINT	1
+-#define SYS_DATA_DIR	"../share/caph/"
++#define SYS_DATA_DIR	"/usr/share/caph/"
+ 
+ static const char *
+ sys_get_data_dir()
+@@ -198,9 +198,9 @@
+ #endif
+ }
+ 
+-#define DATA_CONFIG		"caph.conf"
+-#define DATA_PAPER		"paper.png"
+-#define DATA_MAPS_LIST		"maps/maps.list"
++#define DATA_CONFIG		SYS_DATA_DIR "caph.conf"
++#define DATA_PAPER		SYS_DATA_DIR "paper.png"
++#define DATA_MAPS_LIST		SYS_DATA_DIR "maps/maps.list"
+ 
+ int main(int argc, char *argv[])
+ {
