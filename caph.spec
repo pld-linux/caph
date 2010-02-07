@@ -3,11 +3,12 @@ Name:		caph
 Version:	091231
 Release:	0.3
 License:	GPL v2
-Group:		Applications
+Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/project/caphgame/caph/caph-091231/%{name}-src-%{version}.tar.bz2
 # Source0-md5:	26d743ed2b82726dea8cd3c4780b3adb
 Source1:	http://dl.sourceforge.net/project/caphgame/caph/caph-091231/%{name}-data-%{version}.tar.bz2
 # Source1-md5:	42877f73bba16d835391ddaf747ccdd3
+Source2:	%{name}.desktop
 Patch0:		%{name}-libpng.patch
 Patch1:		%{name}-sysdatadir.patch
 Patch2:		%{name}-mapsdir.patch
@@ -50,6 +51,9 @@ install bin/caph $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 cp -r caph-data/share/caph/* $RPM_BUILD_ROOT%{_datadir}/%{name}
 
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -58,3 +62,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/caph/CHANGELOG doc/caph/README
 %attr(755,root,root) %{_bindir}/caph
 %{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
