@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Caph
+Comment=Sandbox game based on physics
+Exec=caph
+Categories=Game;LogicGame;
