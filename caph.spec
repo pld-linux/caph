@@ -14,13 +14,11 @@ Patch0:		%{name}-libpng.patch
 Patch1:		%{name}-sysdatadir.patch
 Patch2:		%{name}-mapsdir.patch
 URL:		http://caphgame.sourceforge.net/
-BuildRequires:	Mesa-libGL-devel
+BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
 BuildRequires:	libpng-devel
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
-BuildRequires:	xorg-lib-libXdamage-devel
-BuildRequires:	xorg-lib-libXext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
