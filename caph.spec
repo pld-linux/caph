@@ -36,9 +36,9 @@ segíteni.
 %setup -q -n %{name}-src
 tar xvf %{SOURCE1}
 
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %{__sed} -i "1 s,/sh,/bash," src/{build,mkgen}
 %{__sed} -i "s,libgl,gl," src/build
